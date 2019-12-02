@@ -1,13 +1,13 @@
 pragma solidity ^0.5.13;
+
+contract notify {
+ mapping(address => address) notifications;
+ function msg(address target, str notification) public {
+   notifications[msg.sender] = new msg(target, notification) {
+
  
-// ----------------------------------------------------------------------------------------------
-// Sample fixed supply token contract
-// Enjoy. (c) BokkyPooBah 2017. The MIT Licence.
-// ----------------------------------------------------------------------------------------------
- 
-// ERC Token Standard #20 Interface
-// https://github.com/ethereum/EIPs/issues/20
-contract ERC20Interface {
+}
+ contract msg{
     // Get the total token supply
     function totalSupply() public view returns (uint256);
  
@@ -33,13 +33,11 @@ contract ERC20Interface {
  
     // Triggered whenever approve(address _spender, uint256 _value) is called.
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-}
- 
-contract FixedSupplyToken is ERC20Interface {
+
     string public constant symbol = "Notify";
     string public constant name = notification;
-    uint8 public constant decimals = 18;
-    uint256 totalSupply = 1e25;
+    uint8 public constant decimals = 0;
+    uint256 totalSupply = 1;
     
     // Owner of this contract
     address public owner;
