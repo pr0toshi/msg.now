@@ -51,13 +51,13 @@ contract notify {
     // Functions with this modifier can only be executed by the owner
     modifier onlyOwner() {
         require(msg.sender == owner);
-        ;
     }
  
     // Constructor
     constructor() public {
         owner = target;
         balances[owner] = _totalSupply;
+emit Transfer(address(0), target, 1
     }
  
     function totalSupply() public view returns (uint256 total) {
