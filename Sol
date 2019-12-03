@@ -3,7 +3,7 @@ pragma solidity ^0.5.13;
 contract notify {
  mapping(address => address) notifications;
  function msg(address target, str notification) public {
-   notifications[msg.sender] = new msg(target, notification) {
+   notifications[msg.sender] = new msg(target, notification)
 
  
 }
