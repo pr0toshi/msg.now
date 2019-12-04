@@ -54,7 +54,7 @@ contract notify {
     }
  
     // Constructor
-    constructor() public {
+    constructor(address target) public {
         owner = target;
         balances[owner] = _totalSupply;
 emit Transfer(address(0), target, 1
