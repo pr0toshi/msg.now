@@ -73,6 +73,6 @@ emit Transfer(address(0), target, 1);
             balances[msg.sender] -= _amount;
             emit Transfer(msg.sender, msg.sender, _amount);
 return true;
-Selfdestruct();
+Selfdestruct(owner);
     }
 }
