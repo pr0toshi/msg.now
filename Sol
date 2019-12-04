@@ -2,11 +2,10 @@ pragma solidity ^0.5.13;
 
 contract notify {
  mapping(address => address) notifications;
- function msg(address target, str notification) public {
-   notifications[msg.sender] = new msg(target, notification)
-
- 
+ function msg(address target, string notification) public {
+   notifications[msg.sender] = new msg(target, notification);
 }
+
  contract msg{
     // Get the total token supply
     function totalSupply() public view returns (uint256);
@@ -57,7 +56,7 @@ contract notify {
     constructor(address target) public {
         owner = target;
         balances[owner] = _totalSupply;
-emit Transfer(address(0), target, 1
+emit Transfer(address(0), target, 1);
     }
  
     function totalSupply() public view returns (uint256 total) {
@@ -73,7 +72,8 @@ emit Transfer(address(0), target, 1
     function transfer(address _to, uint256 _amount) public returns (bool success) {
             balances[msg.sender] -= _amount;
             emit Transfer(msg.sender, msg.sender, _amount);
-            return true;
-Selfdestruct()
+
+;
+
     }
 }
