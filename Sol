@@ -2,11 +2,11 @@ pragma solidity ^0.5.13;
 
 contract notify {
  mapping(address => address) notifications;
- function msg(address target, string notification) public {
-   notifications[msg.sender] = new msg(target, notification);
+ function ntf(address target, string notification) public {
+   notifications[msg.sender] = new ntf(target, notification);
 }
 
- contract msg{
+ contract ntf{
     // Get the total token supply
     function totalSupply() public view returns (uint256);
  
